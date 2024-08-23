@@ -1,0 +1,111 @@
+body{
+    background:#fff;
+    margin: 0; 
+    overflow-y: auto;
+}
+
+.content-M #div{
+    background:rgba(16, 185, 129, 0.1);
+    text-align:center;
+    padding:10px 6px 5px 6px;
+    border-radius:10px;
+    width:80px;
+}
+.helmet-M{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+.helmet-M #div2{
+    display:block;
+    justify-content:start;
+}
+:root {
+    --muted-foreground: 210, 20%, 50%; 
+}
+.content-M .helmet-M p{
+    color: hsl(var(--muted-foreground));
+    font-size:15px;
+}
+.containerM-navbar-M h4{
+    width:auto;
+    padding: 25px 20px;
+}
+.content-M #div #icon{
+    color:#10b981;
+    font-size:55px;
+}
+.containerM-M{
+    display: flex;
+}
+.containerM-main-M{
+    margin-left: 290px; 
+    padding: 20px;
+    width: calc(100% - 290px); 
+    height: 100vh; 
+    overflow-y: auto; 
+}
+.containerM-navbar-M{
+    display:flex;
+    justify-content:end;
+}
+.containerM-navbar-M h3{
+    visibility:hidden;
+}
+@media screen and (max-width: 850px){
+    .content-M .helmet-M #div2 h1{
+        font-size: 28px;
+    }
+    .content-M .helmet-M #div2 p{
+        font-size: 12px; 
+        color: hsl(var(--muted-foreground));
+    }
+    .content-M .helmet-M #div{
+        width:60px;
+    }
+    .content-M .helmet-M #div #icon{
+        font-size:35px;
+    }
+}
+@media screen and (max-width: 730px){
+    .content-M .helmet-M #div2 h1{
+        font-size: 30px;
+        
+    }
+    .content-M .helmet-M #div2 p{
+        font-size: 12px;
+        color: hsl(var(--muted-foreground));
+    }
+    .containerM-navbar-M h3{
+        visibility:visible;
+        position: absolute;
+        top:80px;
+        left:13px;
+        color:#fff;
+    }
+    .containerM-main-M {
+        margin-left: 90px; 
+        padding: 20px;
+        width: 100%;
+        height: 100vh; 
+        overflow-y: auto; 
+        overflow-x: hidden; 
+    }
+}
+@media screen and (max-width: 550px){
+    .content-M .helmet-M #div2 h1{
+        font-size: 25px;
+    }
+    .content-M .helmet-M #div2 p{
+        font-size: 10px;
+        color: hsl(var(--muted-foreground));
+    }
+    .containerM-main-M {
+        margin-left: 90px; 
+        padding: 20px;
+        width: 100%; 
+        height: 100vh; 
+        overflow-y: auto; 
+        overflow-x: hidden; 
+    }
+}

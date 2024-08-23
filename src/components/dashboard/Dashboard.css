@@ -1,0 +1,123 @@
+body{
+    background:#fff;
+    margin: 0; 
+    overflow-x: hidden;
+}
+.containerM{
+    display: flex;
+}
+.containerM-main {
+    margin-left: 290px; 
+    padding: 20px;
+    width: calc(100% - 290px); 
+    height: 100vh; 
+    overflow-y: auto; 
+}
+
+.containerM-navbar{
+    display:flex;
+    justify-content:end;
+}
+.containerP {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    height: auto; 
+    margin-top:30px;
+    
+}
+
+.content {
+    text-align: center;
+}
+.content h1{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+:root {
+    --muted-foreground: 210, 20%, 50%; 
+}
+.content p{
+    font-size: 1rem;
+    line-height: 3.75rem;
+    font-weight: 100;
+    color: hsl(var(--muted-foreground));
+    text-align: center;
+}
+.containerM-navbar h3{
+    visibility:hidden;
+}
+.containerM-navbar h4{
+    width:auto;
+    padding: 25px 20px;
+}
+@media screen and (max-width: 850px) {
+    .content h1{
+        font-size: 34px;
+        line-height: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    .content p{
+        font-size: 13px;
+        line-height: 3.75rem;
+        font-weight: 100;
+        color: hsl(var(--muted-foreground));
+        text-align: center;
+    }
+    
+}
+@media screen and (max-width: 730px) {
+    .content h1{
+        font-size: 30px;
+        line-height: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    .content p{
+        font-size: 12px;
+        line-height: 3.75rem;
+        font-weight: 100;
+        color: hsl(var(--muted-foreground));
+        text-align: center;
+    }
+    .containerM-navbar h3{
+        visibility:visible;
+        position: absolute;
+        top:80px;
+        left:13px;
+        color:#fff;
+    }
+    .containerM-main {
+        margin-left: 180px; 
+        padding: 20px;
+        width: auto; 
+        height: 100vh; 
+        overflow-y: auto; 
+    }
+}
+@media screen and (max-width: 550px) {
+    .content h1{
+        font-size: 25px;
+        line-height: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    .content p{
+        font-size: 10px;
+        line-height: 3.75rem;
+        font-weight: 100;
+        color: hsl(var(--muted-foreground));
+        text-align: center;
+    }
+    .containerM-main {
+        margin-left: 130px; 
+        padding: 20px;
+        width: auto; 
+        height: 100vh; 
+        overflow-y: auto; 
+    }
+}

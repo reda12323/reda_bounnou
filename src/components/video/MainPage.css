@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    /*overflow-y: auto;  Ensure vertical scrolling is enabled */
+}
+
+.AI-Video-Generator-V {
+    margin-top: 40px;
+}
+
+.border-text-V {
+    width: auto;
+    margin: auto;
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    justify-content: space-between;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.button-text-V {
+    width: auto;
+    margin: 10px 10px 10px 0px;
+    padding: 8px 25px 8px 25px;
+    border: 1px solid rgb(17 24 39);
+    border-radius: 5px;
+    background-color: rgb(17 24 39);
+    color: #fff;
+}
+
+#description-text-V {
+    width: 80%;
+    border: none;
+    outline: none;
+    resize: none;
+    margin: 18px 0px 0px 20px;
+    overflow-y: auto;
+}
+
+.div-video-message-V {
+    width: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.div-video-message-V.v2 .P2-V {
+    background-color: #e4e4e4;
+}
+
+.div-video-message-V.v2 {
+    background-color: #e4e4e4;
+}
+.video-player-V {
+    width:90%;
+}
+.download-link-V {
+    display:block;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #007BFF;
+    font-size:14px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+.P2-V {
+    width: 100%;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-word;
+    margin: 15px 10px 15px 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+@media screen and (max-width: 1300px) {
+    .border-text-V {
+        display: flex;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .border-text-V {
+        display: flex;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .border-text-V {
+        display: flex;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .border-text-V {
+        flex-direction: column; /* Stack textarea and button vertically */
+        width: 100%;
+        text-align:center;
+    }
+
+    #description-text-V {
+        width: 95%;
+        margin: 10px auto;
+        text-align:left;
+    }
+
+    .button-text-V {
+        width: 95%;
+        margin: 10px auto;
+    }
+}

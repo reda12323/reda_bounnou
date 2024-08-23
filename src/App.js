@@ -1,25 +1,66 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Dashboard from "./components/dashboard/Dashboard.jsx";
+import Conversation from "./components/conversation/Conversation.jsx";
+import Image from "./components/image/Image.jsx";
+import Video from "./components/video/Video.jsx";
+import Music from "./components/music/Music.jsx";
+import Home from './components/Home.jsx';
 import './App.css';
+import { SignIn, SignUp } from '@clerk/clerk-react';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <div>
+                <Routes>
+                    <Route path='/signin' element={<SignIn />} />
+                    <Route path='/signup' element={<SignUp />} />
+                    <Route path='/home' element={<Home />} />
+                    <Route 
+                        path='/dash' 
+                        element={
+                            <ProtectedRoute>
+                                <Dashboard />
+                            </ProtectedRoute>
+                        } 
+                    />
+                    <Route 
+                        path='/conversation' 
+                        element={
+                            <ProtectedRoute>
+                                <Conversation />
+                            </ProtectedRoute>
+                        } 
+                    />
+                    <Route 
+                        path='/image' 
+                        element={
+                            <ProtectedRoute>
+                                <Image />
+                            </ProtectedRoute>
+                        } 
+                    />
+                    <Route 
+                        path='/video' 
+                        element={
+                            <ProtectedRoute>
+                                <Video />
+                            </ProtectedRoute>
+                        } 
+                    />
+                    <Route 
+                        path='/music' 
+                        element={
+                            <ProtectedRoute>
+                                <Music />
+                            </ProtectedRoute>
+                        } 
+                    />
+                </Routes>
+            </div>
+        </Router>
+    );
 }
 
 export default App;

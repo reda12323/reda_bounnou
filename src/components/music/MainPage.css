@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.AI-Music-M {
+    margin-top: 40px;
+}
+
+.border-text-M {
+    width: auto;
+    margin: auto;
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    justify-content: space-between;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.button-text-M {
+    width: auto;
+    margin: 10px 10px 10px 0px;
+    padding: 8px 25px 8px 25px;
+    border: 1px solid rgb(17 24 39);
+    border-radius: 5px;
+    background-color: rgb(17 24 39);
+    color: #fff;
+}
+
+#message-text-M {
+    width: 80%;
+    border: none;
+    outline: none;
+    resize: none;
+    margin: 18px 0px 0px 20px;
+    overflow-y: auto;
+}
+
+.div-answer-message-M {
+    width: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.div-answer-message-M.v2 .P2-M {
+    background-color: #e4e4e4;
+}
+
+
+.P2-M {
+    width: 100%;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-word;
+    margin: 15px 10px 15px 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+@media screen and (max-width: 1300px) {
+    .border-text-M {
+        display: flex;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .border-text-M {
+        display: flex;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .border-text-M {
+        display: flex;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .border-text-M {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    #message-text-M {
+        width: 95%;
+        margin: 10px auto;
+        text-align: left;
+    }
+
+    .button-text-M {
+        width: 95%;
+        margin: 10px auto;
+    }
+}

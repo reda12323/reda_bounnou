@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    max-height: 100vh;
+    background: #222;
+    overflow-y: auto;
+    margin: 0; 
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.navbar {
+    position: fixed;
+    background: rgb(17 24 39);
+    padding: 10px;
+    min-width: 290px; /* Width of the fixed navbar */
+    height: 100vh;
+    top: 0;
+    left: 0;
+    color: #fff; /* Ensure the text color is white for contrast */
+    z-index: 1000; /* Ensure the navbar is on top */
+}
+
+
+.profile {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 10%;
+    margin-bottom: 50px;
+    gap: 5px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.profile .imgbox {
+    position: relative;
+    width: 50px; /* Set appropriate width for the image box */
+    height: 50px; /* Set appropriate height for the image box */
+}
+
+.imgbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heading {
+    color: #fff;
+}
+
+.heading h3 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-bottom: 5px;
+    border-radius: 8px;
+    transition: font-size 0.4s 0.05s ease-out, background 0s ease-out;
+}
+
+.navbar ul li:hover {
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent white background for glass effect */
+}
+
+.navbar ul li .nav-link {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 50px;
+    text-transform: capitalize;
+    padding: 0px 15px;
+    word-spacing: 0.1em;
+    letter-spacing: 0.05em; /* Adjust the value as needed */
+}
+
+.navbar ul li .nav-link span {
+    margin-left: 10px;
+}
+
+.navbar ul li .nav-link:hover,
+.navbar ul li .nav-link.active {
+    color: #bbb;
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
+}
+
+.navbar ul li .nav-link #Micon {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+/* Maintain hover effect when the link is active */
+.navbar ul li .nav-link.active {
+    color: white;
+    border-radius:10px; /* Ensure text color stays white when active */
+}
+
+@media screen and (max-width: 730px) {
+    .navbar {
+        min-width: 90px;
+        padding: 10px;
+        transition: width 0.3s ease-out;
+        margin:0px;
+    }
+    .profile {
+        display: grid;
+        place-content: center;
+        padding-bottom: 20px;
+        transform: scale(0.8);
+    }
+
+    .heading {
+        display: none;
+    }
+    .navbar ul li .nav-link {
+        text-align: center;
+        padding: 21px 25px;
+        padding-top: 19px;
+    }
+    .navbar ul li .nav-link span {
+        display: none;
+    }
+    .navbar ul li .nav-link #Micon {
+        margin: 0;
+    }
+    .navbar ul li {
+        position: relative;
+    }
+}

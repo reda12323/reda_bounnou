@@ -1,0 +1,119 @@
+/* MainPage.css */
+
+.AI-Image-Generator-I {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.border-text-I {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.container-I {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  gap: 10px; /* Space between elements */
+}
+
+#description-text-I {
+  flex: 1;
+  min-width: 100%;
+  resize: none;
+  height: 100px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-right: 10px; /* Space between textarea and select */
+  font-size: 16px;
+}
+
+.dropdown-container-I {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 150px;
+}
+
+.dropdown-container-I label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.dropdown-container-I select {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.p-2-I {
+  padding: 10px;
+}
+
+.w-full-I {
+  width: 100%;
+}
+
+.button-text-I {
+  background-color: rgb(17 24 39);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button-text-I:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.images-container-I {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top:20px;
+}
+
+.image-card-I {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
+
+.image-card-I img {
+  width: 100%;
+  height: auto;
+}
+
+.download-link-I {
+  display: block;
+  text-align: center;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+.download-link-I:hover {
+  background-color: #0056b3;
+}
+
+.error-I {
+  color: red;
+}
