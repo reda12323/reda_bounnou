@@ -30,7 +30,7 @@ if(!clerk_key){
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ClerkProvider publishableKey={clerk_key} afterSignOutUrl="/home" afterSignInUrl="/dash" afterSignUpUrl="/dash">
+    <ClerkProvider publishableKey={clerk_key} afterSignOutUrl="/" afterSignInUrl="/dash" afterSignUpUrl="/dash">
       <App />
     </ClerkProvider>
   </React.StrictMode>
