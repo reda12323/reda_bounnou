@@ -16,7 +16,7 @@ const MainPage = () => {
 
   //   setIsRequestPending(true);
   //   const apiUrl = 'https://api.openai.com/v1/chat/completions';
-  //   const apiKey = 'API HERE';
+  //   const apiKey = '';
 
   //   if (!apiKey) {
   //     setError('API key is missing');
