@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import './MainPage.css';
+import useCounter from "../counter/Counter";  // Import the useCounter hook
 
 const MainPage = () => {
+  const { count, maxCount, incrementCount } = useCounter(); // Instantiate the counter
   const [description, setDescription] = useState('');
   const [numImages, setNumImages] = useState(1);
   const [resolution, setResolution] = useState('1024x1024');
@@ -53,9 +55,19 @@ const MainPage = () => {
   // };
 
   const generateImages = async () => {
+    if (isRequestPending || count >= maxCount) {
+      return; // Prevent multiple simultaneous requests or exceeding maxCount
+    }
+
+    setIsRequestPending(true);
+    incrementCount(); // Increment the count
+
+    // Simulate image generation
     const dummyImages = Array.from({ length: numImages }, (_, i) => `https://via.placeholder.com/${resolution}?text=Image+${i+1}`);
     setImages(dummyImages);
     setDescription('');
+
+    setIsRequestPending(false);
   };
 
   return (
@@ -87,9 +99,22 @@ const MainPage = () => {
         </div>
 
         <div className="p-2-I w-full-I">
-          <button onClick={generateImages} className="button-text-I" disabled={isRequestPending}>
-            {isRequestPending ? 'Generating...' : 'Generate Images'}
-          </button>
+        {count >= maxCount ? (
+            <button
+              disabled
+              className="button-text-I"
+            >
+              {isRequestPending ? 'Generating...' : 'Max Reached'}
+            </button>
+          ) : (
+            <button
+              onClick={generateImages}
+              className="button-text-I"
+              disabled={isRequestPending}
+            >
+              {isRequestPending ? 'Generating...' : `Generate ${count + 1}`}
+            </button>
+          )}
         </div>
       </div>
 

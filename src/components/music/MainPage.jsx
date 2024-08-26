@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './MainPage.css';
+import useCounter from "../counter/Counter";
 
 const MainPage = () => {
+  const { count, maxCount, incrementCount } = useCounter();
   const [content, setContent] = useState('');
   const [list, setList] = useState([]);
   const [error, setError] = useState('');
@@ -60,12 +62,20 @@ const MainPage = () => {
   // };
 
   const generateMusic = async () => {
-    // Simulate music generation
+    if (isRequestPending || count >= maxCount) {
+      return; // Prevent multiple simultaneous requests or exceeding maxCount
+    }
+
+    setIsRequestPending(true);
+    incrementCount();
+
     const dummyMusic = [
-      `https://www.example.com/sample-music.mp3?text=Music+1`,
+      `https://www.example.com/sample-music.mp3?text=Music+${count + 1}`,
     ];
-    setList(dummyMusic.map((url) => ({ content: url })));
+    
+    setList((prevList) => [...prevList, ...dummyMusic.map((url) => ({ content: url }))]);
     setContent('');
+    setIsRequestPending(false);
   };
 
   return (
@@ -79,9 +89,19 @@ const MainPage = () => {
           name="message"
         ></textarea>
         <div className="p-2 w-full">
-          <button onClick={generateMusic} className="button-text-M" disabled={isRequestPending}>
-            {isRequestPending ? 'Generating...' : 'Generate'}
-          </button>
+        {count >= maxCount ? (
+            <button disabled className="button-text-M">
+              {isRequestPending ? 'Generating...' : 'Max Reached'}
+            </button>
+          ) : (
+            <button
+              onClick={generateMusic}
+              className="button-text-M"
+              disabled={isRequestPending}
+            >
+              {isRequestPending ? 'Generating...' : `Generate ${count + 1}`}
+            </button>
+          )}
         </div>
       </div>
       <section>

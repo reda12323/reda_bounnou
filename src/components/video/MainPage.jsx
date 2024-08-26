@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './MainPage.css';
+import useCounter from "../counter/Counter";
 
 const MainPage = () => {
+  const { count, maxCount, incrementCount } = useCounter(); // Instantiate the counter
   const [description, setDescription] = useState('');
   const [videos, setVideos] = useState([]);
   const [error, setError] = useState('');
@@ -61,12 +63,20 @@ const MainPage = () => {
   // };
 
   const generateVideo = async () => {
+    if (isRequestPending || count >= maxCount) {
+      return; // Prevent multiple simultaneous requests or exceeding maxCount
+    }
+
+    setIsRequestPending(true);
+    incrementCount(); // Increment the count
+
     // Simulate video generation
     const dummyVideos = [
-      `https://www.example.com/sample-video.mp4?text=Video+1`,
+      `https://www.example.com/sample-video.mp4?text=Video+${count + 1}`,
     ];
-    setVideos(dummyVideos);
+    setVideos([...videos, ...dummyVideos]);
     setDescription('');
+    setIsRequestPending(false);
   };
 
   return (
@@ -80,9 +90,22 @@ const MainPage = () => {
           name="description"
         ></textarea>
         <div className="p-2 w-full">
-          <button onClick={generateVideo} className="button-text-V" disabled={isRequestPending}>
-            {isRequestPending ? 'Generating...' : 'Generate Video'}
-          </button>
+        {count >= maxCount ? (
+            <button
+              disabled
+              className="button-text-V"
+            >
+              {isRequestPending ? 'Generating...' : 'Max Reached'}
+            </button>
+          ) : (
+            <button
+              onClick={generateVideo}
+              className="button-text-V"
+              disabled={isRequestPending}
+            >
+              {isRequestPending ? 'Generating...' : `Generate Video ${count + 1}`}
+            </button>
+          )}
         </div>
       </div>
       <section>

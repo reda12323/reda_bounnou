@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import './MainPage.css'
+import useCounter from "../counter/Counter";
 const MainPage = () => {
+  const { count, maxCount, incrementCount } = useCounter(); // Instantiate the counter
   const [content, setContent] = useState('');
   const [summary, setSummary] = useState('');
   const [error, setError] = useState('');
@@ -74,13 +76,24 @@ const MainPage = () => {
   // };
 
   const summarize = async () => {
-    const newQteBefore = { content };
-    const newSmrBefore = { summary };
+    if (isRequestPending) return; // Prevent multiple simultaneous requests
+    if (count >= maxCount) return; // Stop if the count exceeds maxCount
 
-    setQteBefore([...qteBefore, newQteBefore]);
-    setSmrBefore([...smrBefore, newSmrBefore]);
-    setList([...list, { qteBefore: newQteBefore, smrBefore: newSmrBefore }]);
-    setContent('');
+    setIsRequestPending(true);
+    incrementCount(); // Increment the count
+
+    // Simulating API request
+    setTimeout(() => {
+      const newQteBefore = { content };
+      const newSmrBefore = { summary };
+
+      setQteBefore([...qteBefore, newQteBefore]);
+      setSmrBefore([...smrBefore, newSmrBefore]);
+      setList([...list, { qteBefore: newQteBefore, smrBefore: newSmrBefore }]);
+      setContent('');
+
+      setIsRequestPending(false);
+    }, 1000); // Simulate a request delay
   };
 
   return (
@@ -93,9 +106,22 @@ const MainPage = () => {
           name="message"
         ></textarea>
         <div className="p-2 w-full">
-        <button onClick={summarize} className="button-text" disabled={isRequestPending}>
-          {isRequestPending ? 'Generating...' : 'Generate'}
-        </button>
+        {count >= maxCount ? (
+            <button
+              disabled
+              className="button-text"
+            >
+              {isRequestPending ? 'Generating...' : 'Max Reached'}
+            </button>
+          ) : (
+            <button
+              onClick={summarize}
+              className="button-text"
+              disabled={isRequestPending}
+            >
+              {isRequestPending ? 'Generating...' : `Generate ${count + 1}`}
+            </button>
+          )}
         </div>
       </div>
       <section>
