@@ -1,7 +1,8 @@
 
 .ui-counter-container {
     position: absolute;
-    left: 20px;
+    left:20px;
+    right:20px;
     width: 249px;
     bottom: 20px;
     background: rgb(47, 48, 55); 
@@ -9,6 +10,7 @@
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 .ui-counter-info {
@@ -20,6 +22,7 @@
 .ui-counter-text {
     font-size: 16px;
     margin-bottom: 8px;
+    color: #fff;
 }
 
 .ui-counter-progress {
@@ -38,6 +41,7 @@
     transition: width 0.3s ease;
 }
 
+
 .ui-counter-button {
     width: 200px;
     background: linear-gradient(to right, #6366f1, #8b5cf6, #ec4899); 
@@ -52,6 +56,8 @@
     transition: background 0.3s ease;
     color:#fff;
 }
+
+
 
 .ui-counter-icon {
     margin-right: 5px;

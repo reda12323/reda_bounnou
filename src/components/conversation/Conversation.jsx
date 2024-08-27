@@ -30,6 +30,7 @@ const Conversation = () => {
                     <MainPage />
                 </div>
             </div>
+            
         </div>
     );
 }

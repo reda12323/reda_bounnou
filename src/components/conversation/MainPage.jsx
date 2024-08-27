@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import './MainPage.css'
 import useCounter from "../counter/Counter";
+import UICounter from "../menu/UICounter";
+import UpgradeModal from "../counter/UpgradeModal";
 const MainPage = () => {
   const { count, maxCount, incrementCount } = useCounter(); // Instantiate the counter
   const [content, setContent] = useState('');
@@ -122,6 +124,7 @@ const MainPage = () => {
               {isRequestPending ? 'Generating...' : `Generate ${count + 1}`}
             </button>
           )}
+          <UpgradeModal count={count} maxCount={maxCount} />
         </div>
       </div>
       <section>
@@ -163,6 +166,7 @@ const MainPage = () => {
       </div>
         {error && <p style={{ color: 'red' }}>{error}</p>}
       </section>
+      <UICounter count={count} maxCount={maxCount} />
     </div>
   );
 };

@@ -7,7 +7,7 @@ import { IoMusicalNotes } from "react-icons/io5";
 import { IoMdCode } from "react-icons/io";
 import { CiSettings } from "react-icons/ci";
 import "./Menu.css";
-import UICounter from './UICounter';
+// import UICounter from './UICounter';
 
 const Menu = () => {
     return (
@@ -64,7 +64,7 @@ const Menu = () => {
                     </NavLink>
                 </li>
             </ul>
-            <UICounter/>
+            {/* <UICounter/> */}
         </div>
     );
 }

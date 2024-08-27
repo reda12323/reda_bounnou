@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './MainPage.css';
 import useCounter from "../counter/Counter";
+import UICounter from '../menu/UICounter';
 
 const MainPage = () => {
   const { count, maxCount, incrementCount } = useCounter();
@@ -128,6 +129,7 @@ const MainPage = () => {
         </div>
         {error && <p style={{ color: 'red' }}>{error}</p>}
       </section>
+      <UICounter count={count} maxCount={maxCount} />
     </div>
   );
 };
