@@ -1,0 +1,36 @@
+
+.lh-header{
+    display: flex;
+    padding:20px;
+}
+
+.lh-first-part{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+
+.lh-first-part .title{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.lh-img{
+    width: 50px; 
+    height: 50px; 
+}
+
+.lh-second-part{
+    margin-left:auto;
+}
+.lh-second-part button {
+    background-color: #fff; 
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}

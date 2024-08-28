@@ -1,0 +1,50 @@
+.landing-hero {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding-top: 3.5rem; 
+    padding-bottom: 2rem; 
+  }
+  
+  .landing-title {
+    line-height: 1;
+    font-weight: 800;
+  }
+
+  .landing-title h1 {
+    font-size:5.5rem;
+  }
+  
+  .sub-text {
+    font-size: 14px;
+    font-weight: 300;
+    color: #71717a;
+    margin-bottom:18px;
+  }
+
+  .gradient-text {
+    font-size:4.5rem;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #a855f7, #ec4899);
+    margin-bottom:20px;
+  }
+  
+  
+  .cta-button {
+    padding: 15px; 
+    letter-spacing: 0.7px;
+    border-radius: 9999px; 
+    font-weight: 600;
+    background: linear-gradient(to right, #6366f1, #8b5cf6, #ec4899);
+    cursor: pointer;
+    color:#fff;
+    margin-bottom:18px;
+  }
+  .credit-info{
+    font-size: 12.5px;
+    font-weight: 300;
+    color: #71717a;
+    margin-bottom: 5px
+  }
+  

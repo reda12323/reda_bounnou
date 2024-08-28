@@ -5,7 +5,7 @@ import Image from "./components/image/Image.jsx";
 import Video from "./components/video/Video.jsx";
 import Music from "./components/music/Music.jsx";
 import Code from "./components/code/Code.jsx";
-import Home from './components/Home.jsx';
+import Home from './components/home/Home.jsx';
 import './App.css';
 import { SignIn, SignUp } from '@clerk/clerk-react';
 import ProtectedRoute from './components/ProtectedRoute';
