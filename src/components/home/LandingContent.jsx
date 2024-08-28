@@ -6,6 +6,7 @@ const LandingContent = () => {
         { name: "Antonio", avatar: "A", title: "Software Engineer", description: "This is the best application I've used!" },
         { name: "Maria", avatar: "M", title: "Product Manager", description: "Amazing experience!" },
         { name: "John", avatar: "J", title: "Designer", description: "Highly recommend!" },
+        { name: "Carlos", avatar: "C", title: "Architect", description: "Love it!" },
     ];
 
     return (
