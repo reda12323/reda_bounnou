@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './MainPage.css';
 import useCounter from "../counter/Counter";
 import UICounter from '../menu/UICounter';
+import UpgradeModal from "../counter/UpgradeModal";
+
 
 const MainPage = () => {
   const { count, maxCount, incrementCount } = useCounter(); // Instantiate the counter
@@ -107,6 +109,7 @@ const MainPage = () => {
               {isRequestPending ? 'Generating...' : `Generate Video ${count + 1}`}
             </button>
           )}
+          <UpgradeModal count={count} maxCount={maxCount} />
         </div>
       </div>
       <section>

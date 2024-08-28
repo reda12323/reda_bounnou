@@ -1,0 +1,111 @@
+body{
+    background:#fff;
+    margin: 0; 
+    overflow-y: auto;
+}
+
+.content-Code #div{
+    background-color: rgba(4, 120, 87, 0.1);
+    text-align:center;
+    padding:10px 6px 5px 6px;
+    border-radius:10px;
+    width:80px;
+}
+.helmet-Code{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+.helmet-Code #div2{
+    display:block;
+    justify-content:start;
+}
+:root {
+    --muted-foreground: 210, 20%, 50%; 
+}
+.content-Code .helmet-Code p{
+    color: hsl(var(--muted-foreground));
+    font-size:15px;
+}
+.containerM-navbar-Code h4{
+    width:auto;
+    padding: 25px 20px;
+}
+.content-Code #div #icon{
+    color:#047857;
+    font-size:55px;
+}
+.containerM-Code{
+    display: flex;
+}
+.containerM-main-Code{
+    margin-left: 290px; 
+    padding: 20px;
+    width: calc(100% - 290px); 
+    height: 100vh; 
+    overflow-y: auto; 
+}
+.containerM-navbar-Code{
+    display:flex;
+    justify-content:end;
+}
+.containerM-navbar-Code h3{
+    visibility:hidden;
+}
+@media screen and (max-width: 850px){
+    .content-Code .helmet-Code #div2 h1{
+        font-size: 28px;
+    }
+    .content-Code .helmet-Code #div2 p{
+        font-size: 12px; 
+        color: hsl(var(--muted-foreground));
+    }
+    .content-Code .helmet-Code #div{
+        width:60px;
+    }
+    .content-Code .helmet-Code #div #icon{
+        font-size:35px;
+    }
+}
+@media screen and (max-width: 730px){
+    .content-Code .helmet-Code #div2 h1{
+        font-size: 30px;
+        
+    }
+    .content-Code .helmet-Code #div2 p{
+        font-size: 12px;
+        color: hsl(var(--muted-foreground));
+    }
+    .containerM-navbar-Code h3{
+        visibility:visible;
+        position: absolute;
+        top:80px;
+        left:13px;
+        color:#fff;
+    }
+    .containerM-main-Code {
+        margin-left: 90px; 
+        padding: 20px;
+        width: 100%;
+        height: 100vh; 
+        overflow-y: auto; 
+        overflow-x: hidden; 
+    }
+}
+@media screen and (max-width: 550px){
+    .content-Code .helmet-Code #div2 h1{
+        font-size: 25px;
+    }
+    .content-Code .helmet-Code #div2 p{
+        font-size: 10px;
+        color: hsl(var(--muted-foreground));
+    }
+    .containerM-main-Code {
+        margin-left: 90px; 
+        padding: 20px;
+        width: 100%; 
+        height: 100vh; 
+        overflow-y: auto; 
+        overflow-x: hidden; 
+    }
+}

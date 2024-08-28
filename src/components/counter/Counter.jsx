@@ -9,7 +9,7 @@ const useCounter = () => {
 
   const initialCount = parseInt(localStorage.getItem(countStorageKey)) || 0;
   const maxCount = 5;
-  const initialTime = 360;
+  const initialTime = 20;
 
   const [count, setCount] = useState(initialCount);
   const [timer, setTimer] = useState(initialTime);

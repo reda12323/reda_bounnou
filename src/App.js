@@ -4,6 +4,7 @@ import Conversation from "./components/conversation/Conversation.jsx";
 import Image from "./components/image/Image.jsx";
 import Video from "./components/video/Video.jsx";
 import Music from "./components/music/Music.jsx";
+import Code from "./components/code/Code.jsx";
 import Home from './components/Home.jsx';
 import './App.css';
 import { SignIn, SignUp } from '@clerk/clerk-react';
@@ -54,6 +55,14 @@ function App() {
                         element={
                             <ProtectedRoute>
                                 <Music />
+                            </ProtectedRoute>
+                        } 
+                    />
+                    <Route 
+                        path='/code' 
+                        element={
+                            <ProtectedRoute>
+                                <Code />
                             </ProtectedRoute>
                         } 
                     />

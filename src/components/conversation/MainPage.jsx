@@ -4,7 +4,7 @@ import useCounter from "../counter/Counter";
 import UICounter from "../menu/UICounter";
 import UpgradeModal from "../counter/UpgradeModal";
 const MainPage = () => {
-  const { count, maxCount, incrementCount } = useCounter(); // Instantiate the counter
+  const { count, maxCount, incrementCount } = useCounter(); 
   const [content, setContent] = useState('');
   const [summary, setSummary] = useState('');
   const [error, setError] = useState('');
@@ -78,13 +78,13 @@ const MainPage = () => {
   // };
 
   const summarize = async () => {
-    if (isRequestPending) return; // Prevent multiple simultaneous requests
-    if (count >= maxCount) return; // Stop if the count exceeds maxCount
+    if (isRequestPending) return; 
+    if (count >= maxCount) return; 
 
     setIsRequestPending(true);
-    incrementCount(); // Increment the count
+    incrementCount(); 
 
-    // Simulating API request
+   
     setTimeout(() => {
       const newQteBefore = { content };
       const newSmrBefore = { summary };
@@ -95,7 +95,7 @@ const MainPage = () => {
       setContent('');
 
       setIsRequestPending(false);
-    }, 1000); // Simulate a request delay
+    }, 1000); 
   };
 
   return (
