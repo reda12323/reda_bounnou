@@ -35,7 +35,7 @@
     "eject": "react-scripts eject",
     "postinstall": "prisma generate",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+      "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
