@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/reda_bounnou.github.io/static/css/main.9ce83958.css",
+    "main.js": "/reda_bounnou.github.io/static/js/main.89ff7275.js",
+    "static/js/453.1ff99365.chunk.js": "/reda_bounnou.github.io/static/js/453.1ff99365.chunk.js",
+    "index.html": "/reda_bounnou.github.io/index.html",
+    "main.9ce83958.css.map": "/reda_bounnou.github.io/static/css/main.9ce83958.css.map",
+    "main.89ff7275.js.map": "/reda_bounnou.github.io/static/js/main.89ff7275.js.map",
+    "453.1ff99365.chunk.js.map": "/reda_bounnou.github.io/static/js/453.1ff99365.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ce83958.css",
+    "static/js/main.89ff7275.js"
+  ]
+}
