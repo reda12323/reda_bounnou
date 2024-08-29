@@ -1,4 +1,5 @@
 {
+  "homepage": "https://reda12323.github.io/reda_bounnou.github.io",
   "name": "my-app-saas",
   "version": "0.1.0",
   "private": true,
@@ -32,7 +33,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "eslintConfig": {
     "extends": [
